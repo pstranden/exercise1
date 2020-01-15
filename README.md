@@ -10,10 +10,13 @@ git clone
 # browse the content
 git log
 git status
-git branch -a
 
 # create a feature branch (based on branch you're on - propably master)
 git checkout -b <your-very-own-feature-branch>
+# check you see your feature branch listed:
+git branch -a
+# but wait a second: the feature branch "add_participants" already exists
+git checkout add_participants
 
 # work! (edit files, create a new file)
 # Add your name into the file "participants.txt" (keep the names ordered alphabetically)
@@ -43,3 +46,5 @@ git pull --rebase
 
 # push your changes
 git push
+# akinrepo
+# akinrepo
