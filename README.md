@@ -2,49 +2,96 @@
 
 This is a README file describing all the neat stuff inside this repository.
 
-Here's also a good place for instructions:
+It's also a good place for instructions:
 
-# clone the repo
-git clone
+## Clone the repo
 
-# browse the content
-git log
-git status
+Copy the repository metadata to the current directory and checkout the default branch 'master'.
 
-# create a feature branch (based on branch you're on - propably master)
-git checkout -b <your-very-own-feature-branch>
-# check you see your feature branch listed:
-git branch -a
-# but wait a second: the feature branch "add_participants" already exists
-git checkout add_participants
+`git clone`
 
-# work! (edit files, create a new file)
-# Add your name into the file "participants.txt" (keep the names ordered alphabetically)
+## Browse the repository content
 
-# let's see what you have been doing
-git status
-git diff
+Find the repository you cloned in file explorer and see what's there (nothing much isn't it?). Then go into the same 
+directory and see what does the metadata tell you:
 
-# when you're ready: prepare the staging area for a commit
-git add <file1 file2 file3>
+`cd exercise1`
 
-# create a commit
-git commit -m "something describing what have you been up to, preferably starting with a ticket/issue number for the task"
+`git log`
 
-# git push
-git push
+`git status`
 
-# problems? hmmm... did you check if anyone else had any changes?
-git pull
+You can also try graphical tool to see the commits:
 
-# resolve any conflicts you might have before retrying
-(git status; #edit fileA; git add <fileA>; git status)
-git push
+`gitk`
 
-# still have conflicts? try to be quicker. try a command:
-git pull --rebase
+## Branches
 
-# push your changes
-git push
-# akinrepo
-# akinrepo
+Create a feature branch (based on branch you're on - propably master)
+
+`git checkout -b <your-very-own-feature-branch>`
+
+check you see your feature branch listed:
+
+`git branch -a`
+
+but wait a second: the feature branch "origin/add_participants" already exists. Checkout the contents:
+
+`git checkout add_participants`
+
+## Working
+
+Make changes to repository content (edit files, create a new file). You can make changes anyway you like.
+
+Add your name into the file "participants.txt" (keep the names ordered alphabetically). You can open the file for editing for example in file explorer.
+
+Let's see what you have been doing:
+
+`git status`
+
+`git diff`
+
+When you're done editing: prepare the staging area for a commit
+
+`git add <file1 file2 file3>`
+
+Create a commit
+
+`git commit -m "something describing what have you been up to, preferably starting with a ticket/issue number for the task"`
+
+Publish your work on remote repository (server)
+
+`git push`
+
+## Conflict resolving
+
+Problems? hmmm... did you check if anyone else had any changes?
+
+`git pull`
+
+Resolve any conflicts you might have before retrying
+
+`git status` (tells you what files have conflicts)
+
+edit <file1> (resolve the conflict manually)
+
+`git add <file1>` (tell the git that <file1> is now fixed)
+
+`git status` (instructs how to proceed)
+
+`git commit` (finalize merging)
+
+`git status` (does everything look ok?)
+
+`git push`
+
+Did you still have conflicts? try to be quicker. try a command:
+
+`git pull --rebase`
+
+If you still have conflicts resolve those.
+
+Publish your work
+
+`git push`
+
